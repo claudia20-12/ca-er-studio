@@ -1,0 +1,1039 @@
+
+/* ================================
+   CA. / ER. — STUDIO CREATIVO
+   ================================ */
+
+:root {
+    --carta: #f8f6f0;
+    --avorio: #eeece3;
+    --nero: #272723;
+    --grigio: #77766e;
+    --rosso: #cf382e;
+    --linea: #d8d4ca;
+
+    --font-principale: "DM Sans", Arial, sans-serif;
+    --font-titoli: "Space Grotesk", Arial, sans-serif;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--carta);
+    color: var(--nero);
+    font-family: var(--font-principale);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CONTENITORE */
+
+main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 7%;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--linea);
+}
+
+.logo {
+    font-family: var(--font-titoli);
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.logo-punto {
+    color: var(--rosso);
+}
+
+.studio-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero-content {
+    padding: 120px 0 105px;
+    max-width: 1050px;
+}
+
+.sopratitolo {
+    color: var(--rosso);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: var(--font-titoli);
+    font-size: clamp(48px, 7vw, 100px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+    font-weight: 600;
+    max-width: 1000px;
+}
+
+h1 span {
+    display: block;
+    color: var(--rosso);
+    margin-top: 12px;
+}
+h1 .titolo-principale {
+    display: block;
+    color: var(--nero);
+    font-size: clamp(36px, 4.5vw, 62px);
+    letter-spacing: -3px;
+    margin-top: 0;
+}
+.presentazione {
+    max-width: 480px;
+    margin-top: 42px;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--grigio);
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+}
+
+.portfolio-link {
+    display: grid;
+    grid-template-columns: 80px 1fr 50px;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 15px;
+    border-bottom: 1px solid var(--linea);
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.portfolio-link:last-child {
+    border-bottom: none;
+}
+
+.portfolio-link:hover {
+    background: var(--avorio);
+    padding-left: 28px;
+}
+
+.numero {
+    color: var(--rosso);
+    font-family: var(--font-titoli);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.portfolio-testo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.portfolio-testo strong {
+    font-family: var(--font-titoli);
+    font-size: clamp(22px, 3vw, 35px);
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.portfolio-testo small {
+    color: var(--grigio);
+    font-size: 13px;
+}
+
+.freccia {
+    font-size: 30px;
+    color: var(--rosso);
+    justify-self: end;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover .freccia {
+    transform: translate(5px, -5px);
+}
+
+/* CONTATTI */
+
+.contatti {
+    padding: 120px 0;
+    max-width: 750px;
+}
+
+h2 {
+    font-family: var(--font-titoli);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.contatti > p:not(.sopratitolo) {
+    color: var(--grigio);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 470px;
+}
+
+.contatti-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.contatti-link a {
+    display: inline-block;
+    padding: 16px 22px;
+    border: 1px solid var(--nero);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contatti-link a:hover {
+    background: var(--rosso);
+    color: white;
+    border-color: var(--rosso);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 0;
+    border-top: 1px solid var(--linea);
+    color: var(--grigio);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+
+/* =================================
+   DIGITAL BUSINESS CARD — CA. / ER.
+   ================================= */
+
+.digital-card-mark {
+    width: 340px;
+    height: 220px;
+    margin: 55px 0 0 auto;
+    cursor: pointer;
+    perspective: 1200px;
+    background: transparent;
+    border: none;
+    transition: transform 0.35s ease;
+}
+
+.digital-card-mark:hover {
+    transform: translateY(-5px);
+}
+
+.digital-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.85s cubic-bezier(.2,.7,.2,1);
+}
+
+.digital-card-mark.ruota .digital-card-inner {
+    transform: rotateY(180deg);
+}
+
+.digital-card-face {
+    position: absolute;
+    inset: 0;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--linea);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.digital-card-front {
+    background: var(--avorio);
+    color: var(--nero);
+}
+
+.digital-card-back {
+    background: var(--nero);
+    color: var(--avorio);
+    border-color: var(--nero);
+    transform: rotateY(180deg);
+}
+
+.digital-card-header,
+.digital-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+.digital-card-status {
+    color: var(--rosso);
+    font-weight: 700;
+}
+
+.digital-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.digital-card-logo {
+    font-family: var(--font-titoli);
+    font-size: 39px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.digital-card-logo span {
+    color: var(--rosso);
+}
+
+.qr-symbol {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.qr-symbol i {
+    background: var(--nero);
+}
+
+.qr-symbol i:nth-child(2),
+.qr-symbol i:nth-child(4),
+.qr-symbol i:nth-child(8) {
+    background: var(--rosso);
+}
+
+.qr-symbol i:nth-child(5) {
+    background: transparent;
+    border: 1px solid var(--nero);
+}
+
+.digital-card-footer {
+    padding-top: 13px;
+    border-top: 1px solid var(--linea);
+    color: var(--grigio);
+    font-size: 8px;
+}
+
+.card-hint {
+    position: absolute;
+    bottom: 49px;
+    right: 22px;
+    color: var(--rosso);
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.card-back-content {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.card-back-title {
+    font-family: var(--font-titoli);
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.card-back-content a {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--rosso);
+}
+
+.card-back-content a span {
+    color: var(--avorio);
+    font-weight: 400;
+}
+
+.card-back-content button {
+    margin-top: 2px;
+    padding: 8px;
+    background: var(--rosso);
+    color: white;
+    border: none;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .digital-card-mark {
+        width: min(100%, 320px);
+        height: 220px;
+        margin: 40px auto 0;
+    }
+
+    .digital-card-face {
+        padding: 18px;
+    }
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 0 6%;
+    }
+
+    .header {
+        padding: 25px 0;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .studio-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content {
+        padding: 90px 0 25px;
+    }
+
+    h1 {
+        font-size: clamp(30px, 9vw, 65px);
+        letter-spacing: -1px;
+    }
+
+    .presentazione {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .portfolio-link {
+        grid-template-columns: 35px 1fr 25px;
+        gap: 10px;
+        padding: 27px 5px;
+    }
+
+    .portfolio-testo strong {
+        font-size: 21px;
+    }
+
+    .portfolio-testo small {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .freccia {
+        font-size: 24px;
+    }
+
+    .contatti {
+        padding: 85px 0;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    .contatti-link {
+        flex-direction: column;
+    }
+
+    .contatti-link a {
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        font-size: 9px;
+        line-height: 1.6;
+    }
+}
+@media (max-width: 700px) {
+    h1 .titolo-principale {
+        font-size: clamp(5px, 12vw, 48px);
+        letter-spacing: -1px;
+    }
+
+    .digital-card-mark {
+        margin-top: 40px;
+    }
+}
+.contatti-link button {
+    display: inline-block;
+    padding: 16px 22px;
+    border: 1px solid var(--rosso);
+    background: var(--rosso);
+    color: white;
+    font-family: var(--font-principale);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contatti-link button:hover {
+    background: var(--nero);
+    border-color: var(--nero);
+}
+
+
+/* BIGLIETTO DA VISITA INTERATTIVO */
+
+.digital-card-mark {
+    width: 290px;
+    height: 190px;
+    margin: 55px 0 0 auto;
+    cursor: pointer;
+    perspective: 1000px;
+    border: none;
+    background: transparent;
+}
+
+.digital-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+    transform-style: preserve-3d;
+}
+
+.digital-card-mark.ruota .digital-card-inner {
+    transform: rotateY(180deg);
+}
+
+.digital-card-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 17px;
+    background: var(--avorio);
+    border: 1px solid var(--linea);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.digital-card-front {
+    transform: rotateY(0deg);
+}
+
+.digital-card-back {
+    transform: rotateY(180deg);
+    cursor: default;
+    background: var(--nero);
+    color: var(--avorio);
+    border-color: var(--nero);
+    transform: rotateY(180deg);
+}
+
+
+.card-hint {
+    position: absolute;
+    bottom: 4px;
+    right: 17px;
+    color: var(--rosso);
+    font-size: 7px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.card-back-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+.card-back-title {
+    font-family: var(--font-titoli);
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.card-back-content a {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--rosso);
+}
+
+.card-back-content a span {
+    color: var(--rosso);
+    font-weight: 400;
+}
+
+.card-back-content button {
+    margin-top: 3px;
+    padding: 7px;
+    background: var(--rosso);
+    color: white;
+    border: none;
+    font-size: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.digital-card-mark:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 700px) {
+    .digital-card-mark {
+        width: 270px;
+        height: 190px;
+        margin: 40px 0 0 auto;
+    }
+}
+
+/* =================================
+   BIGLIETTO — FORMATO ESTESO
+   ================================= */
+
+.hero-content {
+    max-width: none;
+}
+
+.digital-card-mark {
+    width: 100%;
+    max-width: none;
+    height: 340px;
+    margin: 65px 0 0;
+}
+
+.digital-card-face {
+    padding: 32px 38px;
+}
+
+.digital-card-logo {
+    font-size: clamp(48px, 7vw, 82px);
+    letter-spacing: -5px;
+}
+
+.digital-card-content {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    .digital-card-mark {
+        width: 100%;
+        height: 320px;
+        margin-top: 45px;
+    }
+
+    .digital-card-face {
+        padding: 22px;
+    }
+
+    .digital-card-logo {
+        font-size: 48px;
+    }
+}
+
+/* CONTATTI CON ICONE */
+
+.card-back-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 13px 35px;
+    align-items: center;
+    flex: 1;
+}
+
+.card-back-title {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    font-size: clamp(23px, 3vw, 38px);
+    line-height: 1.1;
+}
+
+.card-back-content a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--rosso);
+    font-size: 10px;
+}
+
+.contatto-icona {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--grigio);
+    border-radius: 50%;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.contatto-dettaglio {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contatto-dettaglio small {
+    color: var(--avorio);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.contatto-freccia {
+    margin-left: auto;
+    font-size: 17px;
+}
+
+.card-back-content button {
+    grid-column: 2;
+    width: fit-content;
+    min-width: 190px;
+}
+
+@media (max-width: 700px) {
+    .card-back-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card-back-title {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: 23px;
+    }
+
+    .card-back-content button {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .contatto-icona {
+        width: 29px;
+        height: 29px;
+    }
+}
+.contatto-icona svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: var(--rosso);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+}
+
+/* DOWNLOAD BIGLIETTO */
+.card-download {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.card-download button {
+    padding: 12px 20px;
+    border: 1px solid var(--nero);
+    background: transparent;
+    color: var(--nero);
+    font-family: var(--font-principale);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card-download button:hover {
+    background: var(--rosso);
+    border-color: var(--rosso);
+    color: white;
+}
+
+@media (max-width:700px) {
+    .card-download button {
+        width: 100%;
+    }
+}
+
+
+/* ================================
+   ANIMAZIONE INGRESSO HERO
+   ================================ */
+
+@keyframes entraDalBasso {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .sopratitolo {
+    animation: entraDalBasso 0.8s ease both;
+    animation-delay: 0.2s;
+}
+
+.hero h1 .titolo-principale {
+    animation: entraDalBasso 0.9s ease both;
+    animation-delay: 0.4s;
+}
+
+.hero h1 > span:not(.titolo-principale) {
+    animation: entraDalBasso 0.9s ease both;
+    animation-delay: 0.65s;
+}
+
+.hero .presentazione {
+    animation: entraDalBasso 0.9s ease both;
+    animation-delay: 0.9s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .sopratitolo,
+    .hero h1 .titolo-principale,
+    .hero h1 > span:not(.titolo-principale),
+    .hero .presentazione {
+        animation: none;
+    }
+}
+/* ================================
+   ANIMAZIONE HOVER BIGLIETTO
+   ================================ */
+
+.digital-card-mark {
+    transition: transform 0.4s ease;
+}
+
+.digital-card-mark:hover {
+    transform: translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .digital-card-mark {
+        transition: none;
+    }
+
+    .digital-card-mark:hover {
+        transform: none;
+    }
+}
+
+/* ================================
+   ANIMAZIONE PORTFOLIO
+   ================================ */
+
+.portfolio-link {
+    position: relative;
+    overflow: hidden;
+    transition:
+        background 0.4s ease,
+        padding 0.4s ease;
+}
+
+.portfolio-link .portfolio-testo strong {
+    transition: color 0.35s ease;
+}
+
+.portfolio-link .freccia {
+    transition: transform 0.4s ease;
+}
+
+.portfolio-link:hover .portfolio-testo strong {
+    color: var(--rosso);
+}
+
+.portfolio-link:hover .freccia {
+    transform: translate(7px, -7px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-link,
+    .portfolio-link .portfolio-testo strong,
+    .portfolio-link .freccia {
+        transition: none;
+    }
+}
+
+/* ================================
+   ANIMAZIONE SCORRIMENTO
+   ================================ */
+
+.sezione-animata {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.sezione-animata.visibile {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sezione-animata {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* COMPARSA PROGRESSIVA PORTFOLIO */
+
+.portfolio-link:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.portfolio-link:nth-child(2) {
+    transition-delay: 0.35s;
+}
+
+/* ================================
+   ANIMAZIONE LOGO CA. / ER.
+   ================================ */
+
+.header .logo {
+    animation: logoIngresso 1s ease both;
+}
+
+.logo-punto {
+    display: inline-block;
+    animation: puntoRespiro 2.5s ease-in-out 1s infinite;
+}
+
+@keyframes logoIngresso {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes puntoRespiro {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header .logo,
+    .logo-punto {
+        animation: none;
+    }
+}
+/* QR CODE TEMPORANEO */
+
+.qr-code {
+    width: 75px;
+    height: 75px;
+    padding: 4px;
+    background: white;
+    flex-shrink: 0;
+}
+
+.qr-code img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* QR CODE — IDENTITÀ STUDIO */
+
+.qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.qr-code {
+    width: 75px;
+    height: 75px;
+    padding: 4px;
+    background: white;
+    border: 1px solid var(--rosso);
+}
+
+.qr-code img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-caption {
+    color: var(--rosso);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
